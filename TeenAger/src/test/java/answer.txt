@@ -1,0 +1,20 @@
+Программист допустил ошибку в методе isTeenager(),
+точнее в:
+if (age < 19) {
+                    result = true;
+                }
+                else {
+                    result = false;
+Если оставить данный код без изменений, возраст от 0 до 10 выдает результат, который гласит True, это ошибочно
+Аналогично возраст 19, который должен получить результат True, получает False
+Нужно изменить в методе isTeenager() код:
+public static boolean isTeenager(int age)
+
+
+            if (age >= 13 && 19 >= age) {
+                result = true;
+            }
+             else {
+                result = false;
+             }
+                return result;
