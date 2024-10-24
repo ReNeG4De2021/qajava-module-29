@@ -1,0 +1,46 @@
+<html>
+<head>
+<title>PersonTest.java</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<style type="text/css">
+.s0 { color: #cf8e6d;}
+.s1 { color: #bcbec4;}
+.s2 { color: #bcbec4;}
+.s3 { color: #6aab73;}
+.s4 { color: #2aacb8;}
+</style>
+</head>
+<body bgcolor="#1e1f22">
+<table CELLSPACING=0 CELLPADDING=5 COLS=1 WIDTH="100%" BGCOLOR="#606060" >
+<tr><td><center>
+<font face="Arial, Helvetica" color="#000000">
+PersonTest.java</font>
+</center></td></tr></table>
+<pre><span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">DataProvider</span><span class="s2">;</span>
+<span class="s0">import </span><span class="s1">org</span><span class="s2">.</span><span class="s1">testng</span><span class="s2">.</span><span class="s1">annotations</span><span class="s2">.</span><span class="s1">Test</span><span class="s2">;</span>
+
+<span class="s0">public class </span><span class="s1">PersonTest </span><span class="s2">{</span>
+
+    <span class="s1">@DataProvider</span><span class="s2">(</span><span class="s1">name </span><span class="s2">= </span><span class="s3">&quot;ageTest&quot;</span><span class="s2">)</span>
+    <span class="s1">Object</span><span class="s2">[][] </span><span class="s1">ageDataProvider</span><span class="s2">() {</span>
+        <span class="s0">return new </span><span class="s1">Object</span><span class="s2">[][] {</span>
+                <span class="s2">{</span><span class="s4">10</span><span class="s2">, </span><span class="s0">true</span><span class="s2">},</span>
+                <span class="s2">{</span><span class="s4">15</span><span class="s2">, </span><span class="s0">true</span><span class="s2">},</span>
+                <span class="s2">{</span><span class="s4">25</span><span class="s2">, </span><span class="s0">false</span><span class="s2">},</span>
+                <span class="s2">{</span><span class="s4">31</span><span class="s2">, </span><span class="s0">false</span><span class="s2">},</span>
+                <span class="s2">{</span><span class="s4">13</span><span class="s2">, </span><span class="s0">false</span><span class="s2">}</span>
+        <span class="s2">};</span>
+    <span class="s2">}</span>
+    <span class="s1">@Test</span><span class="s2">(</span><span class="s1">dataProvider </span><span class="s2">= </span><span class="s3">&quot;ageTest&quot;</span><span class="s2">)</span>
+    <span class="s0">public void </span><span class="s1">personTestIsTeenager</span><span class="s2">(</span><span class="s0">int </span><span class="s1">age</span><span class="s2">, </span><span class="s0">boolean </span><span class="s1">expectedResult</span><span class="s2">) {</span>
+        <span class="s0">boolean </span><span class="s1">result</span><span class="s2">;</span>
+        <span class="s1">result </span><span class="s2">= </span><span class="s1">Person</span><span class="s2">.</span><span class="s1">isTeenager</span><span class="s2">(</span><span class="s1">age</span><span class="s2">);</span>
+        <span class="s1">assertEquals</span><span class="s2">(</span><span class="s1">result</span><span class="s2">, </span><span class="s1">expectedResult</span><span class="s2">);</span>
+    <span class="s2">}</span>
+
+    <span class="s0">private void </span><span class="s1">assertEquals</span><span class="s2">(</span><span class="s0">boolean </span><span class="s1">result</span><span class="s2">, </span><span class="s0">boolean </span><span class="s1">expectedResult</span><span class="s2">) {</span>
+    <span class="s2">}</span>
+<span class="s2">}</span>
+</pre>
+</body>
+</html>
